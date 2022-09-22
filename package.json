@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && ttsc && cp -R ./src/db/migrations ./dist/db",
-    "dev": "nodemon --watch src -e ts --exec ts-node -r dotenv/config src/index.ts",
+    "dev": "NODE_PATH=src nodemon --watch src -e ts --exec ts-node -r dotenv/config src/index.ts",
     "start": "node dist/index.js"
   },
   "author": "",
