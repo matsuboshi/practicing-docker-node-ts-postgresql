@@ -10,3 +10,19 @@ psql -U postgres postgres
 // example of a query inside psql
 select * from migrations;
 
+
+
+// building just the service/container "app"
+docker-compose up -d --build app
+
+// building all services/containers and showing logs
+docker-compose up -d --build && docker-compose logs -f
+
+//shows running containers
+docker ps && docker-compose ps  
+
+// enters in a specific container
+docker exec -it ed2db1e309ff /bin/sh
+
+//shuts down all the services/containers
+docker-compose down
