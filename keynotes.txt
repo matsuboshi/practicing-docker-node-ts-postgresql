@@ -1,0 +1,12 @@
+// starts postgres db and -U informs the user and password 
+psql -U postgres postgres
+
+// show all the tables inside psql
+\dt
+
+// quit psql
+\q
+
+// example of a query inside psql
+select * from migrations;
+
