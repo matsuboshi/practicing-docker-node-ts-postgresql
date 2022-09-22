@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express'
+import db from 'db'
 
 const PORT = process.env.PORT || 3001
 
@@ -10,5 +11,6 @@ app.get('/', (req: Request, res: Response) => {
 
 app.listen(PORT, () => {
   console.log(`Running on http://localhost:${PORT}`)
+  db.runMigrations()
 })
 
